@@ -1,0 +1,66 @@
+
+{% extends "layout.html" %}
+{% block title %}
+
+{% endblock %}
+{% block content %}
+{%load static %}
+    <title>admin</title>
+</head>
+<style>
+    body{
+    
+        background-color: rgb(188, 218, 166);
+    }
+    header{
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: left;
+        color: rgb(6, 66, 105);
+    }
+    h1{
+        text-align: center;
+    }
+    .mi{
+        padding-top: 0px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .bim{
+    
+    padding-top: 15px;    
+        text-align: center;
+        font-size: 30px;
+    }
+    #mib{
+        column-count: 2;
+        padding-top: 40px;
+    }
+</style>
+<body>
+    
+
+<!-- <link rel="stylesheet" type="text/css" href="{%static "css/about.css" %}">  -->
+    
+       <header>WELCOME ADMIN </header>
+    
+<div id="mib">
+
+    <div class="mi">
+        <h1>Customers Details</h1>
+   <a href="/stafflog">click here</a>
+   </div>
+    <div class="bim">
+   <h1>Orders Details </h1>
+   <a href="/ordersrcv">click here</a>
+</div>
+</div>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br>
+<br><br>
+
+<br>
+</body>
+</html>
+{% endblock %}  

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}
+{% endblock %}
+{% block content %}
+{% load static %}
+
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'products.css' %}"></link> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function()   {
+          
+          $.get("http://localhost:8000/products/",{ }).done(function(data){
+         
+           $('#res').html(data)})
+          
+          });
+
+  
+
+       
+     
+   
+      </script>
+  <body>
+    <div id="res" class="w3-main w3-content w3-padding" >
+        <div id="about" class="about">
+           <div class="contai" data-aos="fade-up">
+              <div class="about-img">
+                <img src="{%static "images/1.jpg" %}" alt="" width="400px" height="300px">
+
+              </div>
+            </div>
+          
+            
+          </div>
+        </div>
+
+      
+    </body>
+    
+  
+
+
+
+    {% endblock %}
+

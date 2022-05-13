@@ -1,0 +1,105 @@
+
+{% block title %}
+{% endblock %}
+{% block content %}
+
+
+{% load static %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}"/>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sign Up</title>
+</head>
+<body>
+   <div class="navbar">
+         Sign Up Form  
+   </div>
+
+<div class="sidenav">
+         <div class="login-main-text">
+             <h1>JOIN TO OUR FAMILY !</h1>
+
+            <p>'Signup here and be with us '</p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form action="" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" id="f">
+               
+                  <div class="form-group">
+                     <label>Enter name</label>
+                     <input type="text" class="form-control " name="usrname" id="usrname" placeholder=" usrsname " >
+                  </div>
+<div class="form-group">
+                     <label>Enter mobile number</label>
+                     <input type="number" class="form-control" id="mobilenumber" placeholder="mobile number">
+                  </div>
+                  <div class="form-group">
+                     <label>Enter your email address</label>
+                     <input type="text" class="form-control" id="emailid" placeholder="email ID">
+                  </div>
+                  <div class="form-group">
+                        <label>Enter  Password</label>
+                        <input type="password" class="form-control" id="pswd" placeholder="new Password">
+                     </div>
+                  <div class="form-group">
+                     <label>Enter your address</label>
+                     <input type="text" class="form-control" id="address" placeholder="address">
+                  </div>
+                  <div class="form-group">
+                     <label>Enter your pincode</label>
+                     <input type="text" class="form-control" id="pincode" placeholder="pincode">
+                  </div>                     
+                   
+                     
+                     <br>
+                
+                     <div class="new">
+                        <button type="submit" class="navbar-brand">Sign Up</a>
+            
+                </button>
+                </button>
+                </a>    
+                </div>
+           
+            </div>
+         </div>
+      </div>
+
+   </form>
+    </body>
+    </html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+   $(document).ready(function(){
+         $("#f").submit(function(e) 
+         {
+            e.preventDefault();
+             usrname= $("#usrname").val()
+             mobilenumber= $("#mobilenumber").val()
+             emailid= $("#emailid").val()
+             pswd= $("#pswd").val()  
+             address= $("#address").val()
+             pincode= $("#pincode").val()
+             $.get("http://localhost:8000/usignup/",{usrname:usrname,mobilenumber:mobilenumber,emailid:emailid,pswd:pswd,address:address,pincode:pincode}).done(function(data){
+                $('body').html(data)
+             });
+         });
+       });       
+    </script>
+
+<footer>
+   <p>&copy; 2021 </p>
+</footer>
+
+
+    {% endblock %} 

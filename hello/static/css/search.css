@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(138, 143, 140);
+}
+.w3-third{
+    padding-left: 100px;
+}
+.wel{
+    text-align: center;
+    width: 300px;
+    height: 50px;
+}
+.new{
+    padding-left: 200px;
+    color: rgb(39, 14, 19);
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+h2{
+    padding-left: 200px;
+    color: rgb(92, 86, 91);
+
+}
+.w3-red{
+    padding-left: 40px;
+}
+.i{padding-left: 1px;
+color: rgb(39, 5, 49);}
+#hel{
+   text-align: center;
+}
+#ser{
+    width: 200px;
+    height: 30px;
+    background-color: rebeccapurple;
+    
+}
+.w3-third{
+    padding-left: 15px;
+}

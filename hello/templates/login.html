@@ -1,0 +1,111 @@
+
+{% block title %}
+{% endblock %}
+{% block content %}
+{%load static %} 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+          
+   $(document).ready(function(){
+     $("#f").submit(function(e){
+       e.preventDefault();
+       usrname=$("#usrname").val()
+       psw=$("#psw").val()
+         $.get("http://localhost:8000/ulogin",{usrname:usrname,psw:psw}).done(function(data)
+       {
+         $("body").html(data);
+
+     });
+   });
+});
+
+
+
+    </script>
+ 
+
+
+ <link rel="stylesheet"href="{%static "css/login.css" %}"> 
+</head>
+
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Login</title>
+      
+      <body> 
+         <div class="navbar">
+                Login Form
+        </div>
+          <div class="sidenav">
+            <div class="login-main-text">
+                <h1>WELCOME TO OUR NURSERY</h1>
+   
+               <p>Login or Register from here to access.</p>
+            </div>
+         </div> 
+         <div class="main">
+           
+            <div class="col-md-6 col-sm-12">
+               <div class="login-form">
+                  <form  class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" id="f">
+                     <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" class="form-control" id="usrname" placeholder="User Name">
+                     </div>
+                     <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="psw" placeholder="Password">
+                        <br>
+                   
+                        <div class="new">
+                            <button type="submit" '>
+                             LOGIN
+               
+                   </button>
+                   <br><br>
+                        <div>
+                   
+                   <span class="w3-right w3-padding w3-hide-small">Forgot <a href="/cpass">password?</a></span>
+                        </div>
+                  </form>  
+                   </div>
+                   <br>
+                     <p id="hu">New User???.. Sign Up Here</p>
+   
+                     <div class="new">
+                        <button type="submit" >
+                          <a href="/signup" class="navbar-brand">SIGN UP</a>
+                          
+
+   
+               </div>
+            </div>
+         </div>
+         
+               
+      </div>
+   </div>
+</div>
+
+    </body>
+    <br>    <br>
+   
+    <br> <br> <br>
+    <br> <br>
+
+
+    <footer>
+      <p>&copy; 2021 </p>
+   </footer>
+    </html>
+   
+
+
+    {%endblock%}

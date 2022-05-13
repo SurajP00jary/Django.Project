@@ -1,0 +1,22 @@
+.bg-img{
+    
+    background-color: red;
+}
+body{
+    background-image: url('/static/images/aboutusdu.jpg');
+}
+
+header {
+    padding-left: 500px;
+    font-size: 4rem;
+    color: blue;
+}
+h1{
+    justify-content: center;
+    text-align: justify;
+    padding-left: 150px;
+    padding-right: 130px;
+    color: rgb(27, 27, 27);
+    font-family:inherit;
+    font-size: 30px;
+}   

@@ -1,0 +1,48 @@
+
+.navbar {
+    
+    display: flex;
+    justify-content: space-around;
+      background-color: rgb(2, 13, 17);
+      font-size: 23px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: #ffffff;
+      padding: 25px;  
+      font-stretch: expanded;
+  }
+  .navbar a {
+      text-decoration: none;
+      color: inherit;
+  }
+  .navbar :hover{
+      background-color: rgb(88, 84, 86);
+      width: auto;
+      padding:auto;
+      height: auto;
+      
+      border-radius: 20px;
+      
+      
+  }
+  
+  .navbar-brand {
+      font-size: 1.2em;
+      font-weight: 600;
+  }
+  
+  .navbar-item {
+      font-variant: small-caps;
+     
+  }
+  
+  
+  footer{
+      background-color: rgb(2, 13, 17);
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      color:white;
+      padding: 0px; 
+  }
+  h3{
+      color: rebeccapurple;
+  }
